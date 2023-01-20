@@ -6,6 +6,21 @@ title: Okta Identity Engine API Products release notes 2023
 
 ## January
 
+### Monthly release 2023.02.0
+
+| Change | Expected in Preview Orgs |
+|--------------------------------------------------------------------------|--------------------------|
+| [Smart Card authenticator is EA on Preview](#smart-card-authenticator-is-ea-on-preview) | January 19, 2023 |
+| [Allow list for FIDO2 (WebAuthn) authenticators is EA in Preview](#allow-list-for-fido2-webauthn-authenticators-is-ea-in-preview) | January 19, 2023 |
+
+#### Smart Card authenticator is EA on Preview
+
+You can add a new Smart Card authenticator that enables PIV to be used in authentication policies. You can also restrict the authentication policies to use only Smart Card authenticator as MFA. <!--OKTA-565169-->
+
+#### Allow list for FIDO2 (WebAuthn) authenticators is EA in Preview
+
+Okta now enables you to mange which FIDO2 WebAuthn authenticators are allowed in your org for new enrollments. This feature allows you to create an allow list of specific FIDO2 WebAuthn authenticators (based on FIDO Metadata Service) that can be used in enrollment policies. This allows admins to have greater control over which authenticators may be used in their orgs and determine which users may access them in a granular way.  See `settings.authenticators.constraints` in the `MFA_ENROLL` [Policies API](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Policy/#tag/Policy/operation/createPolicy!path=2/settings/authenticators&t=request). <!--OKTA-559662-->
+
 ### Weekly release 2023.01.1
 
 | Change | Expected in Preview Orgs |
