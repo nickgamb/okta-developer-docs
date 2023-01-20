@@ -10,10 +10,10 @@ title: Okta Identity Engine API Products release notes 2023
 
 | Change | Expected in Preview Orgs |
 |--------------------------------------------------------------------------|--------------------------|
-| [Smart Card authenticator is EA on Preview](#smart-card-authenticator-is-ea-on-preview) | January 19, 2023 |
+| [Smart Card authenticator is EA in Preview](#smart-card-authenticator-is-ea-in-preview) | January 19, 2023 |
 | [Allow list for FIDO2 (WebAuthn) authenticators is EA in Preview](#allow-list-for-fido2-webauthn-authenticators-is-ea-in-preview) | January 19, 2023 |
 
-#### Smart Card authenticator is EA on Preview
+#### Smart Card authenticator is EA in Preview
 
 You can add a new Smart Card authenticator that enables PIV to be used in authentication policies. You can also restrict the authentication policies to use only Smart Card authenticator as MFA. <!--OKTA-565169-->
 
