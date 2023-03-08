@@ -18,10 +18,11 @@ Enable a mobile app to verify a user identity for an Okta custom authenticator.
 * <StackSnippet snippet="notifservicelink" inline />
 * <StackSnippet snippet="appreq" inline />
 * (Optional) Access to the following APIs:
-  * [Apps](https://developer.okta.com/docs/reference/api/apps/#grant-consent-to-scope-for-application)
+  * [Apps](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#tag/Application/operation/grantConsentToScope)
   * [Push providers](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/PushProvider/#tag/PushProvider/operation/createPushProvider)
   * [Authenticator](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Authenticator/#tag/Authenticator/operation/createAuthenticator)
   * [MyAccount App authenticators](https://developer.okta.com/docs/api/openapi/okta-myaccount/myaccount/tag/AppAuthenticator/)
+  * [Authorization Server](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/AuthorizationServer/#tag/AuthorizationServer/operation/replaceAuthorizationServerPolicyRule)
 
 **Sample code**
 
@@ -31,7 +32,7 @@ Enable a mobile app to verify a user identity for an Okta custom authenticator.
 
 ## About custom authentication and the Devices SDK
 
-The Devices SDK allows you to embed push notifications and biometrics directly into your native mobile app. As a result, you can control the entire authentication experience by keeping users on your mobile app for the complete sign-in process. The Devices SDK implements the custom authenticator, which is another authenticator besides Okta Verify that you can use for push notifications. In addition, by implementing a custom authentication flow in your app, you also help drive downloads of your app.
+The Devices SDK allows you to embed push notifications and biometrics directly into your native mobile app. As a result, you can control the entire experience. Prompt users to continue the sign-in process on your mobile app. So, Okta Verify isn't the only authenticator you can use for push notifications. Also, using custom authentication helps drive downloads of your app.
 
 ## Get started
 
@@ -69,7 +70,7 @@ The following image shows the Devices SDK setup in the Admin Console:
 
 ### Create an OIDC web authentication client
 
-The simplest way to integrate authentication in your app is to use the [Authorization code flow grant type](/docs/guides/implement-grant-type/authcode/main/) and implement the OIDC protocol through a web browser.  You need an access token to start the enrollment flow for the Devices SDK. For future sign-in attempts, consider using refresh tokens. <StackSnippet snippet="samplecode" inline />
+The simplest way to integrate authentication in your app is with OIDC through a web browser, using the [Authorization code flow grant type](/docs/guides/implement-grant-type/authcode/main/). You need an access token to start the enrollment flow for the Devices SDK. For future sign-in attempts, consider using refresh tokens. <StackSnippet snippet="samplecode" inline />
 
 <StackSnippet snippet="jwtbearernote" />
 
@@ -131,7 +132,7 @@ If your push notifications aren't delivering:
 3. In the **Reason** section, locate the error message from your push provider. Consult the push provider documentation, if necessary.
 4. Verify that your notification services configuration is valid. See [Edit a notification service](https://help.okta.com/okta_help.htm?type=oie&id=ext-all-notification-services).
 5. Click **Save** to allow push providers to attempt to send notifications again.
-6. If your push notifications aren't delivered, repeat steps 1 through 5.
+6. If your push notifications still aren't delivering, repeat steps 1 through 5.
 
 ## See also
 
